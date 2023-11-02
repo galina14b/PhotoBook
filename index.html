@@ -64,7 +64,9 @@
             сповнить теплом. Ми будемо щасливі допомогти Вам зробити його особливим!
           </p>
 
-          <button class="intro__btn button formOpeningBtn">ЗАМОВИТИ</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfr_bffmgxulrQyxigS8-LlvBNp29y5viiOkdrIyX8r8teeww/viewform?usp=sf_link">
+            <button class="intro__btn button">Замовити</button>
+          </a>
         </div>
 
         <div class="intro__img"></div>
@@ -91,6 +93,7 @@
             щасливі спогади, які ми перетворимо у <span class="color-text">Вашу
               віршовану Фотокнигу.</span>
           </p>
+          <p class="about__text">&#x2661; Галя та Даша</p>
         </div>
 
         <!-- <div class="about__image">
@@ -162,21 +165,21 @@
             <div class="carousel-item active">
               <img src="./img/photobooks/album.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-md-block">
-                <h5><a class="books__link" href="">Перший Рік Життя</a></h5>
+                <h5><a class="books__link" href="/books/First_Year/first_year.html">Перший Рік Життя</a></h5>
                 <!-- <p>Some representative placeholder content for the first slide.</p> -->
               </div>
             </div>
             <div class="carousel-item">
               <img src="./img/photobooks/album.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-md-block">
-                <h5><a class="books__link" href="#">Історія Кохання</a></h5>
+                <h5><a class="books__link" href="/books/Love_Story/love_story.html">Історія Кохання</a></h5>
                 <!-- <p>Some representative placeholder content for the second slide.</p> -->
               </div>
             </div>
             <div class="carousel-item">
               <img src="./img/photobooks/album.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-md-block">
-                <h5><a class="books__link" href="#">День Народження</a></h5>
+                <h5><a class="books__link" href="/books/Happy_Birthday/happy_birthday.html">День Народження</a></h5>
                 <!-- <p>Some representative placeholder content for the third slide.</p> -->
               </div>
             </div>
@@ -184,7 +187,7 @@
             <div class="carousel-item">
               <img src="./img/photobooks/album.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-md-block">
-                <h5><a class="books__link" href="#">Сімейна Фотокнига</a></h5>
+                <h5><a class="books__link" href="./books/Family_Book/family_book.html">Сімейна Фотокнига</a></h5>
                 <!-- <p>Some representative placeholder content for the third slide.</p> -->
               </div>
             </div>
@@ -192,7 +195,7 @@
             <div class="carousel-item">
               <img src="./img/photobooks/album.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-md-block">
-                <h5><a class="books__link" href="#">Будь-яка Ваша Подія</a></h5>
+                <h5><a class="books__link" href="./books/Other/other.html">Будь-яка Ваша Подія</a></h5>
                 <!-- <p>Some representative placeholder content for the third slide.</p> -->
               </div>
             </div>
@@ -386,21 +389,24 @@
       <div class="contacts__block">
         <div class="contacts__info">
           <h2 class="contacts__title title">З радістю зв`яжемось з Вами</h2>
-          <form class="contacts__form" action="" method="post">
-            <input class="contacts__input" type="text" placeholder="Ваше ім`я...">
-            <input class="contacts__input" type="tel" placeholder="Ваш номер телефону...">
+
+          <form class="contacts__form" id="form">
+            <input class="contacts__input" type="text" name="Name" required placeholder="Ваше ім`я...">
+            <input class="contacts__input" type="tel" name="Phone" required placeholder="Номер телефону...">
+            <input class="contacts__input" type="email" name="Email" required placeholder="Електронна пошта...">
             <label>
-              <input type="checkbox" name="messengers" value="Viber">
+              <input type="checkbox" name="Viber" value="yes, viber">
               Зв`язатись зі мною через Viber
             </label>
             <br>
             <label>
-              <input type="checkbox" name="messengers" value="Telegram">
+              <input type="checkbox" name="Telegram" value="yes, telegram">
               Зв`язатись зі мною через Telegram
             </label>
 
-            <input class="contacts__input" type="textarea" placeholder="Ваші побажання...">
-            <button class="contacts__btn button" type="submit">Надіслати</button>
+
+            <input class="contacts__input" type="textarea" name="Message" placeholder="Ваші побажання...">
+            <button class="contacts__btn button" id="submit" type="submit">Надіслати</button>
           </form>
         </div>
         <div class="contacts__img"></div>
@@ -408,9 +414,9 @@
     </div>
   </section>
 
-  <div class="background">
-    <div class="background__content">
-      <div class="background__ornament ornament"></div>
+  <div class="background-contacts">
+    <div class="background-contacts__content">
+      <div class="background-contacts__ornament ornament"></div>
     </div>
   </div>
 
@@ -418,36 +424,13 @@
     <div class="arrowUp__element"></div>
   </div>
 
-  <div class="orderForm">
-    <div class="orderForm__wrapper">
-      <div class="orderForm__cross cross">&#9587;</div>
-      <h3 class="orderForm__title title">Хочу замовити</h3>
-
-      <form class="orderForm__form">
-        <div class="orderForm__item">
-          <label for="clientName" class="orderForm__label">
-            <input type="text" name="clientName" id="clientName" class="orderForm__input" placeholder="Ваше Ім`я:">
-          </label>
+  <div class="alert">
+    <div class="alert__wrapper">
+      <div class="d-flex justify-content-center alert__spinner">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
         </div>
-
-
-        <div class="orderForm__item">
-          <label for="clientPhone" class="orderForm__label">
-            <input type="tel" name="clientPhone" id="clientPhone" class="orderForm__input"
-              placeholder="Ваш номер телефону:">
-          </label>
-        </div>
-
-        <div class="orderForm__item">
-          <label for="clientEmail" class="orderForm__label">
-            <input type="textarea" name="clientEmail" id="clientEmail" class="orderForm__input"
-              placeholder="Ваші побажання:">
-          </label>
-        </div>
-
-        <button type="submit" class="orderForm__btn button">Надіслати</button>
-
-      </form>
+      </div>
     </div>
   </div>
   <div class="dark-background"></div>
@@ -461,15 +444,15 @@
           <img src="./img/icons/Logo.svg" alt="Logo">
         </div>
 
-        <div class="footer__social-icon"><a href="">
+        <!-- <div class="footer__social-icon"><a href="">
             <svg id="Flat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
               <path
                 d="M228.646,34.7676a11.96514,11.96514,0,0,0-12.21778-2.0752L31.87109,105.19729a11.99915,11.99915,0,0,0,2.03467,22.93457L84,138.15139v61.833a11.8137,11.8137,0,0,0,7.40771,11.08593,12.17148,12.17148,0,0,0,4.66846.94434,11.83219,11.83219,0,0,0,8.40918-3.5459l28.59619-28.59619L175.2749,217.003a11.89844,11.89844,0,0,0,7.88819,3.00195,12.112,12.112,0,0,0,3.72265-.59082,11.89762,11.89762,0,0,0,8.01319-8.73925L232.5127,46.542A11.97177,11.97177,0,0,0,228.646,34.7676ZM32.2749,116.71877a3.86572,3.86572,0,0,1,2.522-4.07617L203.97217,46.18044,87.07227,130.60769,35.47461,120.28811A3.86618,3.86618,0,0,1,32.2749,116.71877Zm66.55322,86.09375A3.99976,3.99976,0,0,1,92,199.9844V143.72048l35.064,30.85669ZM224.71484,44.7549,187.10107,208.88772a4.0003,4.0003,0,0,1-6.5415,2.10937l-86.1543-75.8164,129.66309-93.645A3.80732,3.80732,0,0,1,224.71484,44.7549Z" />
             </svg>
           </a>
-        </div>
+        </div> -->
 
-        <div class="footer__social-icon"><a href="">
+        <div class="footer__social-icon"><a href="https://instagram.com/svitlyna_u_virshah?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">
             <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
               version="1.1" viewBox="0 0 64 64" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
               xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink">

@@ -37,20 +37,58 @@ arrowUp.addEventListener('click', function () {
 
 // OrderForm ==================================
 
-const orderFormElement = document.querySelector('.orderForm');
-const openingFormBtn = document.querySelectorAll('.formOpeningBtn');
-const crossForm = document.querySelector('.orderForm__cross');
-const darkBackground = document.querySelector('.dark-background');
-const openingBackground = document.querySelector('.showDarkBackground');
+// const orderFormElement = document.querySelector('.orderForm');
+// const openingFormBtn = document.querySelectorAll('.formOpeningBtn');
+// const crossForm = document.querySelector('.orderForm__cross');
+// const darkBackground = document.querySelector('.dark-background');
+// const openingBackground = document.querySelector('.showDarkBackground');
 
-openingFormBtn.forEach(btn => {
-  btn.addEventListener('click', function () {
-    orderFormElement.classList.add('showForm');
-    darkBackground.classList.add('showDarkBackground');
-  })
-})
+// openingFormBtn.forEach(btn => {
+//   btn.addEventListener('click', function () {
+//     orderFormElement.classList.add('showForm');
+//     darkBackground.classList.add('showDarkBackground');
+//   })
+// })
 
-crossForm.addEventListener('click', function () {
-  orderFormElement.classList.remove('showForm');
-  darkBackground.classList.remove('showDarkBackground');
+// crossForm.addEventListener('click', function () {
+//   orderFormElement.classList.remove('showForm');
+//   darkBackground.classList.remove('showDarkBackground');
+// })
+
+
+
+// Form sending to Google Table ===================
+
+const form = document.querySelector("#form");
+const submitButton = document.querySelector("#submit");
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx27tPAH44LOQn-6SrKTjhvGR_tcobRRaT7LroPN3cPP9JU7FSs9nRWysTZQ_xPQ5eE/exec';
+
+let alert = document.querySelector('.alert');
+let alertSpinner = document.querySelector('.alert__spinner');
+let alertTitle = document.querySelector('.alert__title');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  submitButton.disabled = true;
+  alert.classList.add('showAlert');
+
+
+  let requestBody = new FormData(form);
+  fetch(scriptURL, { method: 'POST', body: requestBody})
+    .then(response => {
+
+      console.log(response);
+      submitButton.disabled = false;
+      form.reset();
+      alert.classList.remove('showAlert');
+
+      })
+    .catch(error => {
+      
+      alert.classList.remove('showAlert');
+      console.log(error)
+      submitButton.disabled = false;
+    }
+  )
+
 })

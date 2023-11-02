@@ -449,6 +449,7 @@ h4 {
   color: #D8A795;
 }
 
+
 @media all and (max-width: 1024px) {
   .body {
     font-size: 30px;
@@ -988,7 +989,9 @@ h4 {
 }
 
 .about__text:last-of-type {
+  width: fit-content;
   margin-bottom: 0;
+  margin-left: auto;
 }
 
 @media all and (max-width: 1200px) {
@@ -1107,6 +1110,10 @@ h4 {
     padding: 55px 10px 0 90px;
   }
 
+  .about__block {
+    padding: 30px 20px;
+  }
+
   .about__ornament {
     width: 75px;
     height: 379px;
@@ -1117,7 +1124,7 @@ h4 {
   }
 
   .about__text {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .about__image {
@@ -1279,7 +1286,7 @@ h4 {
 
 @media all and (max-width: 425px) {
   .why {
-    height: 527px;
+    height: 547px;
   }
 
   .why__content {
@@ -1288,7 +1295,7 @@ h4 {
 
   .why__ornament {
     width: 75px;
-    height: 527px;
+    height: 547px;
   }
 }
 
@@ -1455,7 +1462,7 @@ h4 {
   }
 
   .carousel-caption h5 {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
@@ -1467,7 +1474,7 @@ h4 {
 
 @media all and (max-width: 425px) {
   .books {
-    height: 527px;
+    height: 547px;
   }
 
   .books__content {
@@ -1476,7 +1483,7 @@ h4 {
 
   .books__ornament {
     width: 75px;
-    height: 527px;
+    height: 547px;
   }
 }
 
@@ -1868,12 +1875,12 @@ h4 {
 .contacts {
   box-sizing: border-box;
   width: 100%;
-  height: 960px;
+  height: 1050px;
   background-color: #EEF1EF;
 }
 
 .contacts__ornament {
-  height: 960px;
+  height: 1050px;
 }
 
 .contacts__content {
@@ -1956,6 +1963,47 @@ label {
   color: #404648;
 }
 
+.background-contacts {
+  display: none;
+}
+
+@media all and (max-width: 768px) {
+  .background-contacts {
+    margin-top: -1px;
+    display: block;
+    width: 100%;
+    height: 220px;
+  }
+
+  .background-contacts__content {
+    height: 220px;
+    position: relative;
+  }
+
+  .background-contacts__ornament {
+    width: 100px;
+    height: 220px;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .background-contacts {
+    display: block;
+    width: 100%;
+    height: 277px;
+  }
+
+  .background-contacts__content {
+    height: 277px;
+    position: relative;
+  }
+
+  .background-contacts__ornament {
+    width: 75px;
+    height: 277px;
+  }
+}
+
 @media all and (max-width: 1024px) {
   .contacts__content {
     padding: 120px 40px 0 140px;
@@ -2002,7 +2050,7 @@ label {
   }
 
   .contacts__content {
-    padding: 50px 20px 0 120px;
+    padding: 90px 20px 0 120px;
   }
 
   .contacts__input:last-of-type {
@@ -2018,6 +2066,10 @@ label {
 @media all and (max-width: 677px) {
   .contacts__img {
     height: 250px;
+  }
+
+  .contacts__content {
+    padding: 50px 20px 0 120px;
   }
 }
 
@@ -2127,7 +2179,7 @@ label {
       width: 50px;
       height: 50px;
       right: 20px;
-      bottom: 20px;
+      bottom: 60px;
     }
   }
 }
@@ -2144,7 +2196,7 @@ label {
   display: none;
 }
 
-.orderForm {
+.alert {
   background-color: #404648;
   overflow: hidden;
   opacity: 0;
@@ -2159,87 +2211,27 @@ label {
   color: #D8A795;
 }
 
-.orderForm__wrapper {
+.alert__wrapper {
   margin: 20px;
-  border: 2px solid #D8A795;
   position: relative;
 }
 
-.orderForm__cross {
-  right: 30px;
-  top: 30px;
-}
 
-.orderForm__title {
+
+/* .alert__title {
   max-width: 80%;
   margin: 60px auto 20px;
+  font-size: 30px;
+  line-height: 35px;
   padding: 0 10px;
   text-align: center;
   text-transform: uppercase;
   color: #D8A795;
-}
+} */
 
-.orderForm__form {
-  margin: 0 auto 40px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 
-.orderForm__item {
-  padding: 20px;
-  box-sizing: border-box;
-}
 
-.orderForm__label {
-  display: flex;
-  flex-direction: column;
-  color: #EEF1EF;
-}
-
-.orderForm__input {
-  width: 83%;
-  margin-top: 10px;
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid #D8A795;
-  color: #D8A795;
-  outline: none;
-}
-
-.orderForm__input::placeholder {
-  color: #EEF1EF;
-  display: flex;
-  padding-left: 20px;
-}
-
-.orderForm__btn {
-  background-color: #D8A795;
-  color: #404648;
-  border: none;
-  margin: 40px auto 0;
-  width: 80%;
-}
-
-.orderForm__btn:hover {
-  color: #404648;
-  background-color: #EEF1EF;
-  cursor: pointer;
-}
-
-.cross {
-  display: inline-block;
-  position: absolute;
-  color: #D8A795;
-}
-
-.cross:hover {
-  cursor: pointer;
-  color: #EEF1EF;
-  transition: 0.7s;
-}
-
-@keyframes animShowForm {
+@keyframes animShowAlert {
   50% {
     opacity: 0;
     width: 0;
@@ -2252,8 +2244,8 @@ label {
   }
 }
 
-.showForm {
-  animation: animShowForm 0.7s linear forwards;
+.showAlert {
+  animation: animShowAlert 0.7s linear forwards;
 }
 
 .showDarkBackground {
@@ -2261,20 +2253,13 @@ label {
 }
 
 @media all and (max-width: 900px) {
-  .orderForm__title {
+  .alert__title {
     max-width: 70%;
     margin: 30px auto 20px;
   }
 
-  .orderForm .orderForm__form {
-    margin-bottom: 20px;
-  }
 
-  .orderForm__item {
-    padding: 10px;
-  }
-
-  @keyframes animShowForm {
+  @keyframes animShowAlert {
     50% {
       opacity: 0;
       width: 0;
@@ -2289,13 +2274,13 @@ label {
 }
 
 @media all and (max-width: 768px) {
-  .orderForm {
+  .alert {
     width: 90%;
   }
 }
 
 @media all and (max-width: 425px) {
-  @keyframes animShowForm {
+  @keyframes animShowAlert {
     50% {
       opacity: 0;
       width: 0;
@@ -2307,12 +2292,21 @@ label {
       left: 50%;
     }
   }
-
-  .orderForm__cross {
-    top: 15px;
-    right: 15px;
-  }
 }
+
+.alert__title_hide {
+  display: none;
+}
+
+.alert__spinner {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+
 
 .footer {
   box-sizing: border-box;
