@@ -370,10 +370,10 @@ template {
 
 @font-face {
   font-family: 'KyivRegion';
-  src: url('../../fonts/KyivRegion/KyivRegion-Regular.ttf');
-  src: local('../../fonts/KyivRegion/KyivRegion'), local('KyivRegion-Regular'),
-    url('../../fonts/KyivRegion/KyivRegion-Regular.woff2') format('woff2'),
-    url('../../fonts/KyivRegion/KyivRegion-Regular.woff') format('woff');
+  src: url('../fonts/KyivRegion/KyivRegion-Regular.ttf');
+  src: local('../fonts/KyivRegion/KyivRegion'), local('KyivRegion-Regular'),
+    url('../fonts/KyivRegion/KyivRegion-Regular.woff2') format('woff2'),
+    url('../fonts/KyivRegion/KyivRegion-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -441,7 +441,7 @@ h4 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../../img/background/ornament.png");
+  background-image: url("../img/background/ornament.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 132px;
@@ -795,6 +795,7 @@ h4 {
 
 .slider__title {
   text-align: center;
+  color: #404648;
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 55px;
