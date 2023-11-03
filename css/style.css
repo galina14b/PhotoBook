@@ -2187,8 +2187,8 @@ label {
 .dark-background {
   width: 100vw;
   height: 100vh;
-  background-color: #000;
-  opacity: 0.6;
+  background-color: #404648;
+  opacity: .9;
   position: fixed;
   top: 0;
   left: 0;
@@ -2197,16 +2197,14 @@ label {
 }
 
 .alert {
-  background-color: #404648;
   overflow: hidden;
-  opacity: 0;
+  display: none;
   height: fit-content;
   position: fixed;
   width: 70%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  left: -100%;
   z-index: 12;
   color: #D8A795;
 }
@@ -2216,10 +2214,9 @@ label {
   position: relative;
 }
 
-
-
-/* .alert__title {
-  max-width: 80%;
+.alert__title ,
+.error__title {
+  max-width: 100%;
   margin: 60px auto 20px;
   font-size: 30px;
   line-height: 35px;
@@ -2227,49 +2224,18 @@ label {
   text-align: center;
   text-transform: uppercase;
   color: #D8A795;
-} */
-
-
-
-@keyframes animShowAlert {
-  50% {
-    opacity: 0;
-    width: 0;
-  }
-
-  100% {
-    left: 50%;
-    opacity: 0.98;
-    width: 70%;
-  }
 }
+
 
 .showAlert {
-  animation: animShowAlert 0.7s linear forwards;
-}
-
-.showDarkBackground {
   display: block;
 }
 
+
 @media all and (max-width: 900px) {
-  .alert__title {
-    max-width: 70%;
+  .alert__title,
+  .error__title {
     margin: 30px auto 20px;
-  }
-
-
-  @keyframes animShowAlert {
-    50% {
-      opacity: 0;
-      width: 0;
-    }
-
-    100% {
-      left: 50%;
-      opacity: 0.98;
-      width: 70%;
-    }
   }
 }
 
@@ -2280,32 +2246,26 @@ label {
 }
 
 @media all and (max-width: 425px) {
-  @keyframes animShowAlert {
-    50% {
-      opacity: 0;
-      width: 0;
+  .alert__title,
+    .error__title {
+      
+      font-size: 20px;
+      line-height: 25px;
     }
-
-    100% {
-      opacity: 0.9;
-      width: 90%;
-      left: 50%;
-    }
-  }
 }
 
-.alert__title_hide {
+.alert__title_hide,
+.error__title_hide {
   display: none;
 }
 
-.alert__spinner {
-  opacity: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
+.spinner__hide {
+  display: none;
 }
 
+.showDarkBackground {
+  display: block;
+}
 
 
 .footer {

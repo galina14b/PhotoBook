@@ -63,32 +63,51 @@ const form = document.querySelector("#form");
 const submitButton = document.querySelector("#submit");
 const scriptURL = 'https://script.google.com/macros/s/AKfycbx27tPAH44LOQn-6SrKTjhvGR_tcobRRaT7LroPN3cPP9JU7FSs9nRWysTZQ_xPQ5eE/exec';
 
+let background = document.querySelector('.dark-background');
 let alert = document.querySelector('.alert');
 let alertSpinner = document.querySelector('.alert__spinner');
 let alertTitle = document.querySelector('.alert__title');
 
+let errorTitle = document.querySelector('.error__title ');
+
 form.addEventListener('submit', function(e) {
   e.preventDefault();
   submitButton.disabled = true;
+  background.classList.add('showDarkBackground');
   alert.classList.add('showAlert');
+  alertSpinner.classList.remove('spinner__hide');
 
 
   let requestBody = new FormData(form);
   fetch(scriptURL, { method: 'POST', body: requestBody})
     .then(response => {
 
-      console.log(response);
+      if (response.ok) {
+        alertSpinner.classList.add('spinner__hide');
+      alertTitle.classList.remove('alert__title_hide');
       submitButton.disabled = false;
       form.reset();
-      alert.classList.remove('showAlert');
+
+      setTimeout(() => {
+        alertTitle.classList.add('alert__title_hide');
+        alert.classList.remove('showAlert');
+        background.classList.remove('showDarkBackground');
+      }, 5000)
+      } 
 
       })
     .catch(error => {
+      alertSpinner.classList.add('spinner__hide');
+      errorTitle.classList.remove('error__title_hide');
       
-      alert.classList.remove('showAlert');
-      console.log(error)
-      submitButton.disabled = false;
+      setTimeout(() => {
+        errorTitle.classList.add('error__title_hide');
+        alert.classList.remove('showAlert');
+        background.classList.remove('showDarkBackground');
+        submitButton.disabled = false;
+      }, 7000)
     }
   )
 
 })
+

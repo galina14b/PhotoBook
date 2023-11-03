@@ -682,7 +682,7 @@ h4 {
   .open {
     animation-name: moving;
     animation-duration: .3s;
-    top: 99px;
+    top: 96px;
     height: 100vh;
   }
 
@@ -761,7 +761,7 @@ h4 {
   }
 
   .open {
-    top: 56px;
+    top: 54px;
   }
 }
 
@@ -865,6 +865,10 @@ h4 {
   margin-top: 30px;
 }
 
+.price {
+  
+}
+
 @media all and (max-width: 1024px) {
   .intro__content {
     padding: 100px 40px 100px 140px;
@@ -893,7 +897,7 @@ h4 {
   }
 
   .intro__content {
-    padding: 70px 40px 70px 140px;
+    padding: 0 40px 70px 140px;
   }
 
   .intro__img {
@@ -915,7 +919,7 @@ h4 {
   }
 
   .intro__content {
-    padding: 50px 20px 0 120px;
+    padding: 0 20px 0 120px;
   }
 
   .slider {
@@ -933,17 +937,13 @@ h4 {
 }
 
 @media all and (max-width: 726px) {
-  .intro {
-    height: 794px;
+
+  .slider {
+    height: 652px;
   }
 
-  .intro__content {
-    padding: 50px 20px 0 120px;
-  }
-
-  .intro__ornament {
-    height: 794px;
-    background-repeat: repeat;
+  .slider__ornament {
+    height: 652px;
   }
 
   .intro__info {
