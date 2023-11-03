@@ -906,6 +906,13 @@ h4 {
   }
 }
 
+@media (max-width: 452px) {
+  .intro__content {
+  padding: 20px 20px 0 120px;
+  }
+
+}
+
 @media all and (max-width: 425px) {
   .intro {
     height: 606px;
@@ -926,7 +933,7 @@ h4 {
   }
 
   .intro__img {
-    height: 200px;
+    height: 180px;
   }
 }
 
@@ -1073,6 +1080,12 @@ h4 {
   }
 }
 
+@media (max-width: 649px) {
+  .about__content {
+  padding: 90px 20px 0 120px;
+  }
+}
+
 @media all and (max-width: 590px) {
   .about__content {
     padding: 115px 20px 0 120px;
@@ -1147,6 +1160,12 @@ h4 {
 @media all and (max-width: 365px) {
   .about__image {
     height: 180px;
+  }
+}
+
+@media (max-width: 335px) { 
+  .about__content {
+  padding: 30px 10px 0 90px;
   }
 }
 
@@ -1258,9 +1277,15 @@ h4 {
   }
 }
 
+@media (max-width: 595px) {
+  .why__content {
+  padding: 40px 20px 0 120px;
+  }
+}
+
 @media all and (max-width: 580px) {
   .why__content {
-    padding: 15px 20px 0 120px;
+    padding: 50px 20px 0 120px;
   }
 
   .why__grid {
@@ -1290,7 +1315,7 @@ h4 {
   }
 
   .why__content {
-    padding: 20px 10px 0 90px;
+    padding: 40px 10px 0 90px;
   }
 
   .why__ornament {
@@ -1304,9 +1329,7 @@ h4 {
     height: 606px;
   }
 
-  .why__content {
-    padding: 20px 10px 0 90px;
-  }
+  
 
   .why__ornament {
     width: 75px;
@@ -1497,9 +1520,9 @@ h4 {
   }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 333px) {
   .books__content {
-    padding: 30px 10px 0 90px;
+    padding: 60px 10px 0 90px;
   }
 }
 
@@ -2092,7 +2115,7 @@ label {
   position: fixed;
   z-index: 10;
   right: 50px;
-  bottom: 50px;
+  bottom: 75px;
   width: 80px;
   height: 80px;
   background-color: #404648;
@@ -2387,5 +2410,9 @@ label {
   .footer__logo img {
     width: 95px;
     height: 47px;
+  }
+
+  .footer__social-icon:last-of-type {
+    margin-left: 10px;
   }
 }
