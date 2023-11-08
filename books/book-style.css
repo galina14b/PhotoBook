@@ -832,29 +832,78 @@ h4 {
   width: fit-content;
   display: flex;
   align-items: center;
+  background-color: #fff;
 }
 
 .intro__color {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  margin: 0 20px;
+  margin: 10px 20px;
 }
 
-.color-1 {
-  background-color:rgb(119, 47, 47);
+.family__color-1 {
+  background-color: #cfb18f;
 }
 
-.color-2 {
-  background-color: burlywood;
+.family__color-2 {
+  background-color: #ada5a3;
 }
 
-.color-3 {
-  background-color: rgb(76, 105, 155);
+.family__color-3 {
+  background-color: #fff1d5;
 }
 
-.color-4 {
-  background-color: white;
+.family__color-4 {
+  background-color: #eaeeef;
+}
+
+.firstyear__color-1 {
+  background-color: #f2f2ea;
+}
+
+.firstyear__color-2 {
+  background-color: #bfbfc9;
+}
+
+.firstyear__color-3 {
+  background-color: #d7c9bc;
+}
+
+.firstyear__color-4 {
+  background-color: #dccfbf;
+}
+
+.birthday__color-1 {
+  background-color: #957f67;
+}
+
+.birthday__color-2 {
+  background-color: #e8cfb0;
+}
+
+.birthday__color-3 {
+  background-color: #d2d4d1;
+}
+
+.birthday__color-4 {
+  background-color: #c4a169;
+}
+
+.lovestory__color-1 {
+  background-color: #a2a173;
+}
+
+.lovestory__color-2 {
+  background-color: #dccfbe;
+}
+
+.lovestory__color-3 {
+  background-color: #e5e5e3;
+}
+
+.lovestory__color-4 {
+  background-color: #f1f0ec;
 }
 
 .intro__info {
@@ -1050,10 +1099,12 @@ h4 {
 }
 
 .carousel-control-next-icon {
+    background-color: #fff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23404648'%3E%3Cpath d='M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z'/%3E%3C/svg%3E");
 }
 
 .carousel-control-prev-icon {
+    background-color: #fff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23404648'%3E%3Cpath d='M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z'/%3E%3C/svg%3E");
   transform: rotate(180deg);
 }

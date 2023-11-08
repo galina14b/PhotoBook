@@ -1374,22 +1374,26 @@ h4 {
 }
 
 .carousel-inner {
-  width: 90%;
+  width: 80%;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .carousel-control-next-icon {
+  background-color: #fff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23404648'%3E%3Cpath d='M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z'/%3E%3C/svg%3E");
 }
 
 .carousel-control-prev-icon {
+  background-color: #fff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23404648'%3E%3Cpath d='M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z'/%3E%3C/svg%3E");
   transform: rotate(180deg);
 }
 
 .carousel-caption {
   background-color: rgba(64, 70, 72, 0.7);
+  top: 1.25rem;
+  height: 80px;
 }
 
 .carousel-caption h5 {
@@ -1467,6 +1471,12 @@ h4 {
   .carousel-caption h5 {
     font-size: 28px;
   }
+
+    .carousel-caption {
+      padding-top: 0.28rem;
+      top: 1.25rem;
+      height: 46px;
+    }
 }
 
 @media all and (max-width: 455px) {
@@ -1479,13 +1489,13 @@ h4 {
   }
 
   .carousel-caption {
-    padding-top: .6rem;
-    padding-bottom: .6rem;
-    bottom: .25rem;
+    padding-top: 0.3rem;
+    top: 0.28rem;
+    height: 28px;
   }
 
   .carousel-caption h5 {
-    font-size: 24px;
+    font-size: 14px;
   }
 }
 
